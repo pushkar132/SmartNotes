@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{%block content%}
+
+    <h1>Welcome to Smart Notes</h1>
+    <p>{{today}}</p>
+    
+    {% if user.is_authenticated %}
+        <a href="{% url 'notes.list' %}" class="btn btn-primary">Check Out these smart notes</a>
+    {% endif %}
+        
+{%endblock%}
